@@ -9,6 +9,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { RootStackParamList } from "./types";
+import BottomTabNavigator from "./components/organisms/BottomTabNavigator";
 
 import LoginPage from "./pages/LoginPage";
 import FeedPage from "./pages/FeedPage";
@@ -122,15 +123,20 @@ export default function App() {
             <AuthContext.Provider value={authContext}>
                 <NavigationContainer fallback={<Text>Blah blah blah...</Text>}>
                     <Stack.Navigator>
-                        {state.userToken == null ? (
-                            <Stack.Screen name="LoginPage" component={LoginPage} />
-                        ) : (
-                            <Stack.Screen name="FeedPage" component={FeedPage} />
-                        )}
+                        <Stack.Group screenOptions={{
+                            headerShown: false,
+                            }}
+                        >
+                            {state.userToken == null ? (
+                                <Stack.Screen name="LoginPage" component={BottomTabNavigator} />
+                            ) : (
+                                <Stack.Screen name="FeedPage" component={FeedPage} />
+                            )}
+                        </Stack.Group>
                     </Stack.Navigator>
                 </NavigationContainer>
             </AuthContext.Provider>
-          </SafeAreaProvider>
+        </SafeAreaProvider>
     </NativeBaseProvider>
   );
 }
