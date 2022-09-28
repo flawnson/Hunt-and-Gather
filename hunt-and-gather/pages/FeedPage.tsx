@@ -30,7 +30,7 @@ export default function () {
             restaurantName: "Hoolio's hummus haus",
             dishName: "Chicken shawarma platter",
             imgPath: "https://www.fodmapformula.com/wp-content/uploads/Low-FODMAP-chicken-shawarma-plate-Facebook-Post-2.png",
-            price: "9.00",
+            price: "$9.00",
             location: "800m",
             time: "2 hours left"
         },

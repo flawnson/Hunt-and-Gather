@@ -13,14 +13,14 @@ export default function () {
             screenOptions={{
                 tabBarActiveTintColor: '#e91e63',
             }}
-            tabBar={props => <TabBar {...props} />}
+            tabBar={(props: any) => <TabBar {...props} />}
         >
             <Tab.Screen
                 name="Feed"
                 component={FeedPage}
                 options={{
                     tabBarLabel: 'Home',
-                    tabBarIcon: ({ color, size }) => (
+                    tabBarIcon: ({ color, size }: any) => (
                         <Feather name="home" size={size} color={color} />
                     ),
                 }}
@@ -30,7 +30,7 @@ export default function () {
                 component={SignupPage}
                 options={{
                     tabBarLabel: 'Updates',
-                    tabBarIcon: ({ color, size }) => (
+                    tabBarIcon: ({ color, size }: any) => (
                         <Feather name="settings" size={size} color={color} />
                     ),
                     tabBarBadge: 3,
@@ -41,7 +41,7 @@ export default function () {
                 component={SignupPage}
                 options={{
                     tabBarLabel: 'Profile',
-                    tabBarIcon: ({ color, size }) => (
+                    tabBarIcon: ({ color, size }: any) => (
                         <Feather name="user" color={color} size={size} />
                     ),
                 }}
