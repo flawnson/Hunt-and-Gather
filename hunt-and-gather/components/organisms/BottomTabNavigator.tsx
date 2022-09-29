@@ -2,7 +2,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons';
 import FeedPage from "../../pages/FeedPage";
 import SignupPage from "../../pages/SignupPage";
-import TabBar from "../molecules/TabBar";
 
 const Tab = createBottomTabNavigator();
 
@@ -11,9 +10,8 @@ export default function () {
         <Tab.Navigator
             initialRouteName="Feed"
             screenOptions={{
-                tabBarActiveTintColor: '#e91e63',
+                tabBarActiveTintColor: '#8b5cf6',
             }}
-            tabBar={(props: any) => <TabBar {...props} />}
         >
             <Tab.Screen
                 name="Feed"
@@ -33,7 +31,6 @@ export default function () {
                     tabBarIcon: ({ color, size }: any) => (
                         <Feather name="settings" size={size} color={color} />
                     ),
-                    tabBarBadge: 3,
                 }}
             />
             <Tab.Screen
