@@ -13,9 +13,7 @@ export default function () {
 
     return (
         <SafeAreaView>
-            <Center>
-                <FoodCardDeck />
-            </Center>
+            <FoodCardDeck />
         </SafeAreaView>
     )
 }

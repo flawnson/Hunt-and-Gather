@@ -68,12 +68,13 @@ export default function () {
     }, []);
 
     return (
-        <FlatList refreshControl={
+        <FlatList
+            refreshControl={
             <RefreshControl
                 refreshing={refreshing}
                 onRefresh={onRefresh}
-            />
-        } data={data} renderItem={({ item }) => (<FoodCard cardData={item} />)} keyExtractor={item => item.foodId}
+            />}
+            data={data} renderItem={({ item }) => (<FoodCard cardData={item} />)} keyExtractor={item => item.foodId}
         />
     )
 }

@@ -11,8 +11,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { RootStackParamList } from "./types";
 import BottomTabNavigator from "./components/organisms/BottomTabNavigator";
 
+import RestaurantLoginPage from "./pages/OwnerLoginPage";
+import RestaurantSignupPage from "./pages/OwnerSignupPage";
 import LoginPage from "./pages/LoginPage";
 import FeedPage from "./pages/FeedPage";
+import SignupPage from "./pages/SignupPage";
 
 
 // Define the config
@@ -128,7 +131,10 @@ export default function App() {
                             }}
                         >
                             {state.userToken == null ? (
-                                <Stack.Screen name="LoginPage" component={BottomTabNavigator} />
+                                <>
+                                    <Stack.Screen name="SignupPage" component={RestaurantSignupPage} />
+                                    <Stack.Screen name="LoginPage" component={RestaurantLoginPage} />
+                                </>
                             ) : (
                                 <Stack.Screen name="FeedPage" component={FeedPage} />
                             )}

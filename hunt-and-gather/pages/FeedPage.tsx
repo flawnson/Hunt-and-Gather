@@ -8,10 +8,9 @@ import FoodCardDeck from "../components/templates/FoodCardDeck";
 export default function () {
 
     return (
-        <SafeAreaView>
-            <Center>
-                <FoodCardDeck />
-            </Center>
+        // Must have flex to be scrollable
+        <SafeAreaView style={{flex: 1}}>
+            <FoodCardDeck />
         </SafeAreaView>
     )
 }
