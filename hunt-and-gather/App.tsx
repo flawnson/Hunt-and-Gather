@@ -13,9 +13,9 @@ import BottomTabNavigator from "./components/organisms/BottomTabNavigator";
 
 import RestaurantLoginPage from "./pages/OwnerLoginPage";
 import RestaurantSignupPage from "./pages/OwnerSignupPage";
-import LoginPage from "./pages/LoginPage";
-import FeedPage from "./pages/FeedPage";
-import SignupPage from "./pages/SignupPage";
+import LoginPage from "./pages/UserLoginPage";
+import FeedPage from "./pages/UserFeedPage";
+import SignupPage from "./pages/UserSignupPage";
 
 
 // Define the config
